@@ -1,131 +1,153 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>玩具王国 Toy Kingdom</title>
-<style>
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family: "微软雅黑",sans-serif; color:#333;}
-    header{
-        background:#ffcc00;
-        text-align:center;
-        padding:40px 20px;
+  <meta charset="UTF-8" />
+  <title>爱护动物 · 从你我做起</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #f4f7f6;
+      color: #333;
+      line-height: 1.6;
     }
-    header h1{font-size:3rem; color:#222;}
-    header p{font-size:1.2rem; margin-top:8px;}
-
-    .btn-primary{
-        display:inline-block;
-        margin-top:15px;
-        padding:12px 25px;
-        background:#e63946;
-        color:#fff;
-        text-decoration:none;
-        font-weight:600;
-        border-radius:50px;
-        transition:0.3s;
+    header {
+      background: linear-gradient(120deg, #4caf50, #81c784);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
     }
-    .btn-primary:hover{background:#bf1f2d;}
-
-    .hero{
-        background-image:url("https://placehold.co/1200x500?text=玩具王国 Banner");
-        background-size:cover;
-        background-position:center;
-        height:500px;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 2.5rem;
     }
-    .hero h2{
-        color:#fff;
-        font-size:2.8rem;
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.95;
     }
-
-    .products{
-        max-width:1200px;
-        margin:40px auto;
-        display:grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap:20px;
-        padding:0 20px;
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-    .toy-card{
-        border:1px solid #eee;
-        border-radius:6px;
-        overflow:hidden;
-        transition:0.3s;
+    .section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     }
-    .toy-card:hover{
-        transform:translateY(-5px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    .section h2 {
+      margin-top: 0;
+      color: #2e7d32;
     }
-    .toy-card img{width:100%;}
-
-    .toy-card .info{
-        padding:12px;
-        text-align:center;
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
     }
-    .toy-card .info h3{font-size:1.2rem; margin-bottom:8px;}
-    .toy-card .info p{font-size:0.95rem; color:#666;}
-
-    footer{
-        background:#222;
-        color:#fff;
-        text-align:center;
-        padding:20px;
-        margin-top:40px;
-        font-size:0.85rem;
+    .card {
+      background: #f9fdf9;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-</style>
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .card span {
+      font-size: 2.2rem;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .cta {
+      text-align: center;
+      padding: 40px 20px;
+      background: #e8f5e9;
+      border-radius: 12px;
+    }
+    .cta button {
+      background: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 14px 30px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .cta button:hover {
+      background: #43a047;
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>爱护动物 · 从你我做起</h1>
+    <p>尊重生命，守护地球上的每一个伙伴</p>
+  </header>
 
-<header>
-    <h1>玩具王国 Toy Kingdom</h1>
-    <p>孩子们的快乐工厂，乐趣无穷！</p>
-    <a href="#products" class="btn-primary">立即探索玩具</a>
-</header>
+  <main class="container">
+    <section class="section">
+      <h2>为什么要爱护动物？</h2>
+      <p>
+        动物与人类共同生活在同一个地球上，它们是自然生态系统中不可或缺的一部分。
+        爱护动物不仅是对生命的尊重，也是维护生态平衡、保护人类未来的重要行动。
+      </p>
+    </section>
 
-<section class="hero">
-    <h2>发现属于孩子的奇妙世界！</h2>
-</section>
-
-<section id="products" class="products">
-    <div class="toy-card">
-        <img src="https://placehold.co/300x200?text=遥控车" alt="遥控车">
-        <div class="info">
-            <h3>极速遥控车</h3>
-            <p>高性能电动遥控，速度与激情。</p>
+    <section class="section">
+      <h2>我们可以做些什么？</h2>
+      <div class="cards">
+        <div class="card">
+          <span>🐾</span>
+          <h3>拒绝伤害</h3>
+          <p>不虐待、不遗弃动物，拒绝任何形式的残忍行为。</p>
         </div>
-    </div>
-    <div class="toy-card">
-        <img src="https://placehold.co/300x200?text=积木套装" alt="积木套装">
-        <div class="info">
-            <h3>创意积木套装</h3>
-            <p>释放想象力，无限组合玩法。</p>
+        <div class="card">
+          <span>🏠</span>
+          <h3>文明饲养</h3>
+          <p>为宠物提供良好的生活环境，负责任地陪伴它们一生。</p>
         </div>
-    </div>
-    <div class="toy-card">
-        <img src="https://placehold.co/300x200?text=毛绒玩具" alt="毛绒玩具">
-        <div class="info">
-            <h3>萌趣毛绒玩具</h3>
-            <p>柔软可爱，陪伴每一个温暖时刻。</p>
+        <div class="card">
+          <span>🌱</span>
+          <h3>保护栖息地</h3>
+          <p>减少污染，保护森林、海洋和湿地等自然环境。</p>
         </div>
-    </div>
-    <div class="toy-card">
-        <img src="https://placehold.co/300x200?text=拼图游戏" alt="拼图游戏">
-        <div class="info">
-            <h3>趣味拼图游戏</h3>
-            <p>开发思维，寓教于乐。</p>
+        <div class="card">
+          <span>📣</span>
+          <h3>传播理念</h3>
+          <p>向身边的人宣传爱护动物的知识和理念。</p>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<footer>
-    &copy; 2026 玩具王国 Toy Kingdom 保留所有权利
-</footer>
+    <section class="cta">
+      <h2>加入我们，一起行动</h2>
+      <p>哪怕是一个小小的善举，也能为动物带来改变。</p>
+      <button onclick="joinAction()">我愿意守护动物</button>
+    </section>
+  </main>
 
+  <footer>
+    © 2026 爱护动物公益页面 · 用心守护每一个生命
+  </footer>
+
+  <script>
+    function joinAction() {
+      alert("感谢你的善意！爱护动物，从身边的小事开始。");
+    }
+  </script>
 </body>
 </html>
